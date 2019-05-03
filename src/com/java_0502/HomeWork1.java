@@ -16,8 +16,8 @@ public class HomeWork1 extends HttpServlet {
 		
 		계산기 calc = new 계산기();
 		
-		String in1 = request.getParameter("in1"); // 변수 a = 1; // 숫자를 문자로 받음 << Parameter = String
-		String cal = request.getParameter("cal"); // 변수 b = 2;
+		String in1 = request.getParameter("in1");
+		String cal = request.getParameter("cal");
 		String in2 = request.getParameter("in2");
 		
 		int a = Integer.parseInt(in1);
@@ -42,8 +42,8 @@ public class HomeWork1 extends HttpServlet {
 		}
 
 		String html = "";
-		html = html + in1 + " " + cal + " " + in2 + " = " + c + "<br>";
-		html = html + "<a href='http://localhost:8080/JAVAEE/'>처음으로</a>";
+		html += in1 + " " + cal + " " + in2 + " = " + c + "<br>";
+		html += "<a href='http://localhost:8080/JAVAEE/'>처음으로</a>";
 
 		response.getWriter().print(html);
 	}
