@@ -50,7 +50,7 @@ public class HomeWork2 extends HttpServlet {
 			html += "Tall: " +userList.get(num).getTall()+ "<br><br>";
 			html += "Weight: " +userList.get(num).getWeight()+ "<br><br>";
 		} else if (num == -1) {
-			html += "입력 받았습니다 :D <br><br>";
+			html += "저장되었습니다 :D <br><br>";
 		} else if (num == -2) {
 			html += "그런 이름은 없네요 ㅠㅠ";
 		}
