@@ -3,14 +3,11 @@ package com.java_0504;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.java_0502.계산기;
 
 @WebServlet("/HomeWork2")
 public class HomeWork2 extends HttpServlet {
@@ -26,7 +23,6 @@ public class HomeWork2 extends HttpServlet {
 		String age = request.getParameter("age");
 		String tal = request.getParameter("tall");
 		String wei = request.getParameter("weight");
-//		int a = Integer.parseInt(age);
 		
 		// Query 2
 		String name2 = request.getParameter("name2");
@@ -37,8 +33,9 @@ public class HomeWork2 extends HttpServlet {
 			num = -1;
 		} else if (name2 != null){
 			for (int i = 0; i < userList.size(); i++) {
-				if (name2 .equals(userList.get(i).getName())) {
+				if (name2.equals(userList.get(i).getName())) {
 					num = i;
+					break;
 				}
 			}
 		}
@@ -52,12 +49,11 @@ public class HomeWork2 extends HttpServlet {
 		} else if (num == -1) {
 			html += "저장되었습니다 :D <br><br>";
 		} else if (num == -2) {
-			html += "그런 이름은 없네요 ㅠㅠ";
+			html += "그런 이름은 없네요?<br><br>";
 		}
 		
 		html += "<a href='http://localhost:8080/JAVAEE/'>처음으로</a>";
 		response.getWriter().print(html);
-		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
