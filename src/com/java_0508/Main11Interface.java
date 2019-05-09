@@ -7,5 +7,4 @@ public interface Main11Interface {
 	public Student finstu(String name); // 학생 검색
 	public boolean modstu(Student stu); // 학생 수정
 	public boolean remstu(Student stu); // 학생 삭제
-	
 }

@@ -1,3 +1,4 @@
+<%@page import="com.java_0508.Main11Interface"%>
 <%@page import="com.java_0508.Student"%>
 <%@page import="com.java_0508.Main11"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
@@ -24,7 +25,7 @@
 	String pw4 = request.getParameter("pw4");
 	
 	String html = "";
-	Main11 main11 = new Main11();
+	Main11Interface main11 = new Main11();
 	if (name1 != null) {
 		boolean check = main11.addstu(new Student(name1,gender1,id1,pw1));
 		if (check) {
